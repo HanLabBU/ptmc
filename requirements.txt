@@ -1,0 +1,5 @@
+numpy
+scipy
+pillow>=4.1.0
+tifffile
+h5py
