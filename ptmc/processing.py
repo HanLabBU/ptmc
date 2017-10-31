@@ -3,10 +3,13 @@ Code for processing operations for numpy arrays of tif stacks
 """
 
 #Import packages
+#Dependences
 import numpy as np
 from numpy.fft import fft2, ifft2, fftshift
 from scipy.ndimage import median_filter, gaussian_filter, shift
 import itertools
+import gc
+
 
 def doMedianFilter(imgstack, med_fsize=3):
     '''
@@ -44,6 +47,8 @@ def doHomomorphicFilter(imgstack, sigmaVal=7):
 
     # Remove Low Frequency Component and Shift Values
     adjimgs = logimgs - lpComponent
+    del logimgs, lpComponent
+    gc.collect()
     logmin = adjimgs.min()
     adjimgs = adjimgs - logmin #Shift by minimum logged difference value, so lowest value is 0
 
