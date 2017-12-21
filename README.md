@@ -6,11 +6,9 @@ Written for Python 2.7.
 ## Installation
 Installation and associated requirements can be installed after downloading/cloning using
 
-'''markdown
+'''python
 python setup.py install
-
 or
-
 pip setup.py install
 '''
 
