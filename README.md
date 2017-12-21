@@ -3,6 +3,17 @@ Python package with tools to perform Multipage-Tif Motion Correction of videos.
 
 Written for Python 2.7.
 
+## Installation
+Installation and associated requirements can be installed after downloading/cloning using
+
+'''markdown
+python setup.py install
+
+or
+
+pip setup.py install
+'''
+
 ## Contains the following Modules
 
 * io - Input/Output functions for loading and saving multipage tiff stacks
